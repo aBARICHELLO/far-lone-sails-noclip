@@ -3,7 +3,7 @@ This mod restores the developer's original debug mode and provides camera moveme
 
 ## Screenshots
 <div>
-    <a href="yt.barichello.me"><img src="https://i.imgur.com/MOS5CuW.png" width="800"></a>
+    <a href="http://yt.barichello.me"><img src="https://i.imgur.com/MOS5CuW.png" width="800"></a>
 </div>
 
 ## Usage
