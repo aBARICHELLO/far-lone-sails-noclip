@@ -4,6 +4,20 @@ using UnityEngine;
 
 namespace Okomotive.FarLoneSails {
     public class Debugger : MonoBehaviour {
+        públic Debugger() {
+            this.refillEnergyKey = KeyCode.F1;
+            this.repositionKey = KeyCode.F2;
+            this.switchCameraDistance = KeyCode.F3;
+            this.updateWeatherKey = KeyCode.F4;
+            this.switchLevelHelpersKey = KeyCode.F5;
+            this.toogleGizmos = KeyCode.F6;
+            this.enableDisableCoverKey = KeyCode.F7;
+            this.switchVisualModeKey = KeyCode.F8;
+            this.selectFrontModulesKey = KeyCode.F9;
+            this.selectBackModulesKey = KeyCode.F10;
+            this.resetAchievements = KeyCode.Comma;
+        }
+
         void Awake() {
             // if (!Application.isEditor && Debug.isDebugBuild)
             this.SetOn(true);
@@ -15,7 +29,7 @@ namespace Okomotive.FarLoneSails {
                 this.SetOn(this.debug);
             }
 
-            if (Application.isEditor && this.onGameUpdateLoop != null) {
+            if (this.onGameUpdateLoop != null) {
                 this.onGameUpdateLoop();
             }
             if (!this.IsOn()) {
@@ -69,16 +83,17 @@ namespace Okomotive.FarLoneSails {
             }
         }
 
-        public KeyCode refillEnergyKey = KeyCode.F1;
-        public KeyCode repositionKey = KeyCode.F2;
-        public KeyCode switchCameraDistance = KeyCode.F3;
-        public KeyCode updateWeatherKey = KeyCode.F4;
-        public KeyCode switchLevelHelpersKey = KeyCode.F5;
-        public KeyCode toogleGizmos = KeyCode.F6;
-        public KeyCode enableDisableCoverKey = KeyCode.F7;
-        public KeyCode switchVisualModeKey = KeyCode.F8;
-        public KeyCode selectFrontModulesKey = KeyCode.F9;
-        public KeyCode selectBackModulesKey = KeyCode.F10;
+        public KeyCode refillEnergyKey;
+        public KeyCode repositionKey;
+        public KeyCode switchCameraDistance;
+        public KeyCode updateWeatherKey;
+        public KeyCode switchLevelHelpersKey;
+        public KeyCode toogleGizmos;
+        public KeyCode enableDisableCoverKey;
+        public KeyCode switchVisualModeKey;
+        public KeyCode selectFrontModulesKey;
+        public KeyCode selectBackModulesKey;
+        public KeyCode resetAchievements;
 
         bool debug = true;
     }
