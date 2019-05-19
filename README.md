@@ -9,6 +9,12 @@ This mod restores the developer's original debug mode and provides camera moveme
     <a href="http://yt.barichello.me"><img src="https://i.imgur.com/pBfHQym.png" width="800"></a>
 </div>
 
+
+## How to Install
+Download the DLL from the [releases tab](https://github.com/aBARICHELLO/far-lone-sails-noclip/releases) and replace the original in the game instalation folder.<br>
+(default is `C:\Program Files (x86)\Steam\steamapps\common\FAR Lone Sails\Game\FarLoneSails_Data\Managed`).<br>
+To remove the mod simply delete the replaced DLL and ask Steam to verify the game's integrity, downloading back the original file.
+
 ## Usage
 
 #### Debug mode
@@ -30,7 +36,7 @@ Shift+I|Force reset vehicle
 #### Noclip
 Hotkey|Action
 -|-
-Numlock|Toggle noclip mode
+**Numlock**|**Toggle noclip mode**
 Scroll wheel up|Increase FOV
 Scroll wheel down|Reduce FOV
 Home/End|Forwards/Backwards

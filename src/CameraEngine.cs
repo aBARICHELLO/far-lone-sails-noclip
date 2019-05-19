@@ -13,9 +13,10 @@ namespace Okomotive.FarLoneSails {
             if (Input.GetKeyDown(KeyCode.Numlock)) {
                 this.noclip = !this.noclip;
                 if (noclip) {
-                    // TODO: Save starting FOV
+                    this.SaveCameraTransform();
+                    this.camera.fov = noclipFOV;
                 } else {
-                    // TODO: Restore starting FOV
+                    this.LoadCameraTransform();
                 }
             }
 
@@ -40,12 +41,12 @@ namespace Okomotive.FarLoneSails {
             if (Input.GetAxis("Mouse ScrollWheel") > 0f) {
                 this.camera.fov += this.fovChange;
             }
-            Mathf.Clamp(this.camera.fov, 0f, 300f);
+            this.camera.fov = Mathf.Clamp(this.camera.fov, 0f, 130f);
 
             // Camera Rotation
             this.cameraXAngle += 0.5f * Input.GetAxis("Mouse X");
             this.cameraYAngle -= 0.5f * Input.GetAxis("Mouse Y");
-            Mathf.Clamp(this.cameraYAngle, -50f, 50f);
+            this.cameraYAngle = Mathf.Clamp(this.cameraYAngle, -50f, 50f);
             this.camera.transform.eulerAngles = new Vector3(this.cameraYAngle, this.cameraXAngle, 0f);
 
             // Position
@@ -85,16 +86,29 @@ namespace Okomotive.FarLoneSails {
             }
         }
 
-        void SaveStartPos() {}
+        void SaveCameraTransform() {
+            this.savedPosition = this.camera.transform.position;
+            this.savedRotation = this.camera.transform.rotation;
+            this.savedFOV = this.camera.fov;
+        }
 
-        void RestoreSavedPos() {}
-
-        Camera camera;
+        void LoadCameraTransform() {
+            this.camera.transform.SetPositionAndRotation(this.savedPosition, this.savedRotation);
+            this.camera.fov = this.savedFOV;
+        }
 
         // (...)
 
-        bool noclip = true;
+        Camera camera;
+
+        bool noclip = false;
         float fovChange = 500f * Time.deltaTime;
-        float noclipSpeed = 50f;
+
+        const float noclipSpeed = 50f;
+        const float noclipFOV = 80f;
+
+        Vector3 savedPosition;
+        Quaternion savedRotation;
+        float savedFOV = 0f;
     }
 }

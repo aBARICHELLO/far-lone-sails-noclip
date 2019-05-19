@@ -24,7 +24,7 @@ namespace Okomotive.FarLoneSails {
         }
 
         void Update() {
-            if (Input.GetKeyDown(KeyCode.Quote)) {
+            if (Input.GetKeyDown(KeyCode.Numlock)) {
                 this.debug = !this.debug;
                 this.SetOn(this.debug);
             }
@@ -82,6 +82,8 @@ namespace Okomotive.FarLoneSails {
                 }
             }
         }
+
+        // (...)
 
         public KeyCode refillEnergyKey;
         public KeyCode repositionKey;
