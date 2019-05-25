@@ -1,14 +1,18 @@
 # far-lone-sails-noclip
 This mod restores the developer's original debug mode and provides camera movement options to explore the game from other angles.
 
-## Screenshots
-<!-- ## Video -->
-<!-- Click any screenshot below to watch a video demo. -->
+## Video
+Click any thumbnail below to watch a video demonstration.
 <div>
-    <a href="http://yt.barichello.me"><img src="https://i.imgur.com/MOS5CuW.png" width="800"></a>
-    <a href="http://yt.barichello.me"><img src="https://i.imgur.com/pBfHQym.png" width="800"></a>
+    <a href="https://www.youtube.com/watch?v=du6Xyswwp-A"><img src="https://i.imgur.com/EaYtZ7C.png" width="400"></a>
+    <a href="https://www.youtube.com/watch?v=6yTkCJAy4WA"><img src="https://i.imgur.com/350OSCW.png" width="400"></a>
 </div>
 
+## Screenshots
+<div>
+    <a href="http://yt.barichello.me"><img src="https://i.imgur.com/XyE60tq.png" width="800"></a>
+    <a href="http://yt.barichello.me"><img src="https://i.imgur.com/pBfHQym.png" width="800"></a>
+</div>
 
 ## How to Install
 Download the DLL from the [releases tab](https://github.com/aBARICHELLO/far-lone-sails-noclip/releases) and replace the original in the game instalation folder.<br>
@@ -41,5 +45,5 @@ Scroll wheel up|Increase FOV
 Scroll wheel down|Reduce FOV
 Home/End|Forwards/Backwards
 Del/Page Down|Left/Right
-Insert/Page Up|Dowm/Up
+Insert/Page Up|Down/Up
 Keypad0|Hold for increased camera speed
